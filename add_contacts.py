@@ -1,10 +1,13 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 login_url = 'https://app.hubspot.com/login'
 your_email = 'your_email'
 your_password = 'your_password'
 
-driver = webdriver.Firefox()
+options = Options()
+options.add_argument('-headless')
+driver = webdriver.Firefox(executable_path='geckodriver', firefox_options=options)
 driver.get(login_url)
 username = driver.find_element_by_id('username')
 password = driver.find_element_by_id('password')
