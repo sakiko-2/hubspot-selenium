@@ -2,8 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
 login_url = 'https://app.hubspot.com/login'
-your_email = 'your_email'
-your_password = 'your_password'
+your_email = 'your_email' # Please replace with your email
+your_password = 'your_password' # Please replace with your Hubspot password
 
 options = Options()
 options.add_argument('-headless')
